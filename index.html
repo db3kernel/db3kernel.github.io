@@ -56,15 +56,15 @@
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Performance Benchmarking' : '基准测试性能性能提升'"></h3>
-          <p class="text-gray-400" x-text="lang === 'en' ? 'Identify bottlenecks in standard benchmarks like TPCC, TPCDS, and guide system-wide or component-level optimizations.' : '针对数据库的标准测试如TPCC、TPCDS等，我们帮助识别贵系统的性能瓶颈，指导优化方向，最终实现系统整体或关键组件的性能提升。'"></p>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'Identify bottlenecks in standard benchmarks like TPCC, TPCDS, and guide system-wide or component-level optimizations.' : '针对数据库的标准测试如TPCC、TPCDS等，我们帮助识别目标系统的性能瓶颈，指导优化方向，最终实现系统整体或关键组件的性能提升。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'User-Facing Features' : '面向用户的特性设计和开发'"></h3>
-          <p class="text-gray-400" x-text="lang === 'en' ? 'We emphasize business understanding + technical execution + responsiveness + evolution to boost product differentiation.' : '我们强调业务理解 + 技术落地 + 快速响应 + 可持续演进，是提升数据库产品区分度中的关键一环。'"></p>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'We emphasize business understanding + technical execution + responsiveness + evolution to boost product differentiation.' : '在这个场景中，我们强调业务理解 + 技术落地 + 快速响应 + 可持续演进，是提升数据库产品区分度中的关键一环。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'System Evaluation' : '数据库系统整体功能和非功能特性评测'"></h3>
-          <p class="text-gray-400" x-text="lang === 'en' ? 'Systematic evaluation of functional (e.g., robustness, SQL compliance, ACID guarantees) and non-functional (e.g., performance, usability) characteristics.' : '对目标数据库系统的功能特性（如健壮性、SQL兼容度、ACID符合度）和非功能特性（如性能、易用性）等进行系统性的评估。'"></p>
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'System Evaluation' : '数据库系统功能和非功能特性评测'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'Systematic evaluation of functional (e.g., robustness, SQL compliance, ACID guarantees) and non-functional (e.g., performance, usability) characteristics.' : '我们作为专业知识的蓝军，客观的对目标数据库系统的功能特性（如健壮性、SQL兼容度、ACID符合度）和非功能特性（如性能、易用性）等进行系统性的评估。'"></p>
         </div>
       </div>
     </div>
@@ -82,8 +82,8 @@
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Optimizer: DAG to IRs' : '优化器：DAG -> IRs'"></h3>
           <p class="text-gray-400" x-text="lang === 'en' 
-            ? 'A rules-based CBO inspired by Cascades, with local optimizations for efficiency. Supports both OLAP and streaming query planning.' 
-            : '主流程实现了一个基于规则的类似Cascades的CBO，但是局部采用一些特别的方法来解决Cascades框架的效率问题。优化器一体化支持批流两种查询的优化。'"></p>
+            ? 'A rules-based CBO inspired by Cascades, with local optimizations for efficiency. Supports both OLAP and streaming query planning. Full support of cost based remote exchange marking, subquery decorrelation, aggregation pull up/push down, CTE inline/offline, etc.' 
+            : '主流程实现了一个基于规则的类似Cascades的CBO，但是局部采用一些特别的方法来解决Cascades框架的效率问题。优化器一体化支持批流两种查询的优化。完整支持基于代价的remote exchange标记、子查询展开、聚集函数移动、CTE展开和预计算等。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Fully Compiled PL/SQL' : '全编译执行的PL/SQL'"></h3>
@@ -94,8 +94,8 @@
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Runtime: (R+B) × JIT' : '运行时： (R+B) × JIT'"></h3>
           <p class="text-gray-400" x-text="lang === 'en' 
-            ? 'Unified row/vector engine supports shared execution, monitoring, parallelism, and memory overflow handling across OLAP and streaming workloads.' 
-            : '统一的行、向量引擎在批流之间共享了执行框架、监测、本地和远程并行执行，内存溢出处理等，减少重复工作。各个引擎之间通过优化器的协调，能够相互借力。'"></p>
+            ? 'Unified row/vector engine supports shared execution, monitoring, local/remote parallelism, and memory overflow handling across OLAP and streaming workloads.' 
+            : '统一的基于行、向量引擎在批流之间共享了执行框架、监测、本地和远程并行执行，内存溢出处理等，减少重复工作。各个引擎之间通过优化器的协调，能够相互借力。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Storage: Local + Remote' : '存储引擎： Local 凸 + Remotes 凹'"></h3>
@@ -107,7 +107,7 @@
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Smooth Memory Overflow Transition' : '内存溢出的平滑过渡'"></h3>
           <p class="text-gray-400" x-text="lang === 'en' 
             ? 'Fully parallel SI, GC, logging, and recovery. Optimized for large memory with 1M tx/sec on 10 cores, while gracefully degrading when memory is scarce.' 
-            : '存储引擎实现了全并行的SI维护、GC、日志和恢复。为大内存优化，10核心能够达到1M事务/sec的极限性能，当内存不够时，实现平滑的性能过渡。'"></p>
+            : '存储引擎实现了全并行的SI维护、GC、日志和恢复。为大内存优化，10核心能够达到1M事务/sec的极限性能。当内存不够时，受限于IO吞吐量，仍然保持优秀性能的平滑过渡。'"></p>
         </div>
 		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
 		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? '3× Simplified Core Code' : '3倍简化的核心代码'"></h3>
@@ -123,7 +123,7 @@
             : '我们使用TPCC、TPCH、TPCDS和流变体证明我们的领先的性能。详细技术报告看<a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>这里</a>'"></p>
         </div>
 		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
-		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Who We Are' : '我们是谁'"></h3>
+		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Who We Are?' : '我们是谁？'"></h3>
 		  <p class="text-gray-400" x-text="lang === 'en' 
 			? 'We are industry veterans in database kernel development. Our team includes PostgreSQL contributors, CockroachDB PMC members, and Linux kernel contributors.' 
 			: '我们是数据库内核的业界老兵。我们中有PostgreSQL代码贡献者, CockroachDB PMC成员和Linux内核代码贡献者。'">
