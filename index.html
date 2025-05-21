@@ -1,45 +1,133 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-<title>We Build Database Kernels</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Lingo-Style Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      background-color: #0d0d0d;
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #00f260, #0575e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body>
+<body class="overflow-x-hidden" x-data="{ lang: 'en' }" x-init="$watch('lang', val => console.log('Language changed to:', val))" xmlns:x="http://www.w3.org/1999/xhtml">
 
-<h1>Our Services</h1>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<p>
-In database kernels, there is often a gap between the robustness required by industry products and the advances proposed in academic research. 
-</p>    
-<p>
-We demonstrated our skills by building a robust, fast and clean designed modern database kernel db3. We help you to bridge this gap by delivering research-driven consulting, benchmarking and implementation services.  <li>Statement-Of-Work based research consulting</li>  
-  <li>Benchmark driven performance improvements</li>  
-  <li>Customer focused feature design and implementation</li>  
-  <li>Database system functional and performance evaluation</li>
-</p>  
+  <!-- Language Toggle -->
+  <div class="absolute top-4 right-6 z-50">
+    <button @click="lang = (lang === 'en') ? 'zh' : 'en'"
+            class="bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-700 transition">
+      <span x-text="lang === 'en' ? '中文' : 'English'"></span>
+    </button>
+  </div>
 
-<h1>DB3 Technical Report</h1>
-<p>
-DB3 is a modern database kernel we developed to showcase the technologies and innovations we offer.
-</p>
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center text-center px-6">
+    <div>
+      <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6" x-text="lang === 'en' ? 'We Help You Build Database Kernels' : '我们助您构建数据库内核'"></h1>
+      <p class="text-xl md:text-2xl text-gray-400 mb-8" 
+	   x-text="lang === 'en' 
+		 ? 'We are veteran DB kernel developers, bridging academia and real-world industry needs' 
+		 : '我们是数据库内核的老兵，我们希望填补学术界的先进性和业界需要的完整性之间的差距'">
+      </p>
+      <a href="#services" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition" x-text="lang === 'en' ? 'Services We Provide' : '提供的服务'"></a>
+      <a href="#db3" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition" x-text="lang === 'en' ? 'DB3 Kernel We Built' : 'DB3内核'"></a>
+    </div>
+  </section>
 
-<li><a href="db3_250131.pdf">01/31/25</a>
-<ul>
-<li>update tpch single machine number</li>
-<li>add vector search performance</li>
-</ul>
-</li>
+  <!-- Services Section -->
+  <section id="services" class="min-h-screen px-8 py-20 bg-[#111]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12" x-text="lang === 'en' ? 'Services We Provide' : '我们提供的服务'"></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'SOW-Based Kernel Consulting' : '基于SOW的数据库研究'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'Design, develop, and consult on database internals under a clear Statement of Work (SOW) for academic publications, open source, or proprietary goals.' : '在明确的工作说明书（SOW）框架下，无论目的是学术发表，构建开源代码还是私有代码，我们提供围绕数据库内核技术的设计、开发与咨询服务。'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Performance Benchmarking' : '基准测试性能性能提升'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'Identify bottlenecks in standard benchmarks like TPCC, TPCDS, and guide system-wide or component-level optimizations.' : '针对数据库的标准测试如TPCC、TPCDS等，我们帮助识别贵系统的性能瓶颈，指导优化方向，最终实现系统整体或关键组件的性能提升'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'User-Facing Features' : '面向用户的特性设计和开发'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'We emphasize business understanding + technical execution + responsiveness + evolution to boost product differentiation.' : '我们强调业务理解 + 技术落地 + 快速响应 + 可持续演进，是提升数据库产品区分度中的关键一环'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'System Evaluation' : '数据库系统整体功能和非功能特性评测'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' ? 'Systematic evaluation of functional (e.g., robustness, SQL compliance, ACID guarantees) and non-functional (e.g., performance, usability) characteristics.' : '对目标数据库系统的功能特性（如健壮性、SQL兼容度、ACID符合度）和非功能特性（如性能、易用性）等进行系统性的评估'"></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<li><a href="db3_250115.pdf">01/15/25</a>
-<ul>
-<li>update tpch/tpcds single machine number</li>
-</ul>
-</li>
-  
-<br>
-<br>
-<p>Lastest report is available upon request.</p>
-<p>
-<b>Contact: </b><a href="https://www.linkedin.com/in/zhouqingqing/">Qingqing Zhou</a>
-</p>
+  <!-- DB3 Section -->
+  <section id="db3" class="min-h-screen px-8 py-20 bg-[#0e0e0e]">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12" x-text="lang === 'en' ? 'DB3: A Modern Database Kernel We Built' : 'DB3：我们编写的一个现代化的数据库内核'"></h2>
+      <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-10" x-text="lang === 'en' 
+        ? 'Written in C++20/Rust, DB3 emphasizes robustness, developer-friendliness, high performance and scalability. We use benchmarks to prove its strength.' 
+        : 'DB3用C++20/Rust编写：强调健壮性、构建开发友好、高性能和扩展性。我们用基准测试来证明它的能力。'"></p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Optimizer: DAG to IRs' : '优化器：DAG -> IRs'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' 
+            ? 'A rules-based CBO inspired by Cascades, with local optimizations for efficiency. Supports both OLAP and streaming query planning.' 
+            : '主流程实现了一个基于规则的类似Cascades的CBO，但是局部采用一些特别的方法来解决Cascades框架的效率问题。优化器一体化支持批流两种查询的优化。'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Fully Compiled PL/SQL' : '全编译执行的PL/SQL'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' 
+            ? 'Our TPCC is written entirely in PL/SQL, achieving near-API performance. Our layered IR approach is simpler and more maintainable than LLVM-based systems.' 
+            : '我们的TPCC全部由PL/SQL写成，但是能达到几乎和手写API抗衡的性能。不仅如此，我们的IR生产器采用逐层方式进行，比直接基于LLVM的要简单和容易维护的多。'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Runtime: (R+B) × JIT' : '运行时： (R+B) × JIT'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' 
+            ? 'Unified row/vector engine supports shared execution, monitoring, parallelism, and memory overflow handling across OLAP and streaming workloads.' 
+            : '统一的行、向量引擎在批流之间共享了执行框架、监测、本地和远程并行执行，内存溢出处理等，减少重复工作。各个引擎之间通过优化器的协调，能够相互借力。'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Storage: Local + Remote' : '存储引擎： Local 凸 + Remotes 凹'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' 
+            ? 'By leveraging shared storage (compatible with the S3 API), the storage engine distinguishes between local and remote storage. This significantly simplifies implementation and management, enhances robustness and scalability, and enables resource sharing to reduce user costs.' 
+            : '存储引擎借力共享存储的能力（S3 API兼容即可），设计上区分本地和远程的能力：很大的简化了实现和管理、提升了健壮性和扩展性，共享了系统闲散资源降低了用户成本。'"></p>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Smooth Memory Overflow Transition' : '内存溢出的平滑过渡'"></h3>
+          <p class="text-gray-400" x-text="lang === 'en' 
+            ? 'Fully parallel SI, GC, logging, and recovery. Optimized for large memory with 1M tx/sec on 10 cores, while gracefully degrading when memory is scarce.' 
+            : '存储引擎实现了全并行的SI维护、GC、日志和恢复。为大内存优化，10核心能够达到1M事务/sec的极限性能，当内存不够时，实现平滑的性能过渡。'"></p>
+        </div>
+		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? '3× Simplified Core Code' : '3倍简化的核心代码'"></h3>
+		  <p class="text-gray-400" x-text="lang === 'en' 
+			? 'Built from the ground up using modern PLs, DB3 is based on years of academic and industrial experience. We adopt high-quality open-source components for non-core modules, and use automatic codeGen to achieve both performance and simplification.' 
+			: '利用现代编程语言，站在多年的学术研究和工业实践的基础上，我们从头构建了DB3数据库内核。特别的，我们在非核心部分使用优质的开源代码，构建自动代码生成框架获得性能和代码简化的双赢。'">
+		  </p>
+		</div>
+        <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Benchmark Proved Performance' : '基准测试证明的性能'"></h3>
+          <p class="text-gray-400" x-html="lang === 'en' 
+            ? 'We demonstrate our leading performance using TPC-C, TPC-H, TPC-DS, and streaming benchmarks. See the detailed technical report <a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>here</a>.' 
+            : '我们使用TPCC、TPCH、TPCDS和流变体证明我们的领先的性能。详细技术报告看<a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>这里</a>'"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 text-center text-gray-500 text-sm bg-[#0d0d0d] border-t border-gray-800">
+    <span x-text="lang === 'en' ? '© 2025 DB3 Team' : '© 2025 DB3开发团队'"></span>
+  </footer>
 
 </body>
 </html>
