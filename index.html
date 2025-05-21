@@ -36,8 +36,8 @@
       <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6" x-text="lang === 'en' ? 'We Help You Build Database Kernels' : '我们助您构建数据库内核'"></h1>
       <p class="text-xl md:text-2xl text-gray-400 mb-8" 
 	   x-text="lang === 'en' 
-		 ? 'We are veteran DB kernel developers, bridging academia and real-world industry needs' 
-		 : '我们是数据库内核的老兵，我们希望填补学术界的先进性和业界需要的完整性之间的差距'">
+		 ? 'bridging academia and real-world industry needs' 
+		 : '填补学术界的先进性和业界需要的完整性之间的差距'">
       </p>
       <a href="#services" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition" x-text="lang === 'en' ? 'Services We Provide' : '提供的服务'"></a>
       <a href="#db3" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition" x-text="lang === 'en' ? 'DB3 Kernel We Built' : 'DB3内核'"></a>
@@ -120,6 +120,13 @@
             ? 'We demonstrate our leading performance using TPC-C, TPC-H, TPC-DS, and streaming benchmarks. See the detailed technical report <a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>here</a>.' 
             : '我们使用TPCC、TPCH、TPCDS和流变体证明我们的领先的性能。详细技术报告看<a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>这里</a>'"></p>
         </div>
+		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
+		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Who We Are' : '我们是谁'"></h3>
+		  <p class="text-gray-400" x-text="lang === 'en' 
+			? 'We are industry veterans in database kernel development. Our team includes PostgreSQL contributors, CockroachDB PMC members, and Linux kernel contributors.' 
+			: '我们是数据库内核的业界老兵。我们中有PostgreSQL代码贡献者, CockroachDB PMC成员和Linux内核代码贡献者。'">
+		  </p>
+		</div>
       </div>
     </div>
   </section>
