@@ -88,14 +88,14 @@
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Fully Compiled PL/SQL' : '全编译执行的PL/SQL'"></h3>
           <p class="text-gray-400" x-text="lang === 'en' 
-            ? 'Our TPCC is written entirely in PL/SQL, achieving near-API performance. Our layered IR approach is simpler and more maintainable than LLVM-based systems.' 
-            : '我们的TPCC全部由PL/SQL写成，但是能达到几乎和手写API抗衡的性能。不仅如此，我们的IR生产器采用逐层方式进行，比直接基于LLVM的要简单和容易维护的多。'"></p>
+            ? 'Our TPCC is written entirely in PL/SQL, achieving near-API extreme performance. Our layered IR approach is simpler and more maintainable than LLVM-based systems.' 
+            : '我们的TPCC全部由PL/SQL写成，但是能达到几乎和手写API抗衡的极致性能。不仅如此，我们的IR生产器采用逐层方式进行，比直接基于LLVM的要简单和容易维护的多。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Runtime: (R+B) × JIT' : '运行时： (R+B) × JIT'"></h3>
           <p class="text-gray-400" x-text="lang === 'en' 
-            ? 'Unified row/vector engine supports shared execution, monitoring, local/remote parallelism, and memory overflow handling across OLAP and streaming workloads.' 
-            : '统一的基于行、向量引擎在批流之间共享了执行框架、监测、本地和远程并行执行，内存溢出处理等，减少重复工作。各个引擎之间通过优化器的协调，能够相互借力。'"></p>
+            ? 'Unified row/vector engine supports shared execution, monitoring, local/remote parallelism, and memory overflow handling across OLAP and streaming workloads. TPCH/TPCDS proved leading performance.' 
+            : '统一的基于行、向量引擎在批流之间共享了执行框架、监测、本地和远程并行执行，内存溢出处理等，减少重复工作。各个引擎之间通过优化器的协调，能够相互借力。TPCH/TPCDS证明其领先业界的性能。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Storage: Local + Remote' : '存储引擎： Local 凸 + Remotes 凹'"></h3>
@@ -124,9 +124,9 @@
         </div>
 		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
 		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Who We Are?' : '我们是谁？'"></h3>
-		  <p class="text-gray-400" x-text="lang === 'en' 
-			? 'We are industry veterans in database kernel development. Our team includes PostgreSQL contributors, CockroachDB PMC members, and Linux kernel contributors.' 
-			: '我们是数据库内核的业界老兵。我们中有PostgreSQL代码贡献者, CockroachDB PMC成员和Linux内核代码贡献者。'">
+		  <p class="text-gray-400" x-html="lang === 'en' 
+			? 'We are industry veterans in database kernel development. Our team includes PostgreSQL contributors, CockroachDB PMC members, and Linux kernel contributors. Conact <a href=https://www.linkedin.com/in/zhouqingqing/ target=_blank class=text-blue-400 underline>us</a>' 
+			: '我们是数据库内核的业界老兵。我们中有PostgreSQL代码贡献者, CockroachDB PMC成员和Linux内核代码贡献者。联系<a href=https://www.linkedin.com/in/zhouqingqing/ target=_blank class=text-blue-400 underline>我们</a>'">
 		  </p>
 		</div>
       </div>
