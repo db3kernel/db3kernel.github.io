@@ -18,14 +18,33 @@
     }
   </style>
 </head>
-<body class="overflow-x-hidden" x-data="{ lang: 'en' }" x-init="$watch('lang', val => console.log('Language changed to:', val))" xmlns:x="http://www.w3.org/1999/xhtml">
+
+<body
+  class="overflow-x-hidden"
+  x-data="{ lang: 'en' }"
+  x-init="
+    (() => {
+      const url = new URL(window.location.href);
+      const query = url.search.toLowerCase();
+
+      if (query.includes('zh')) {
+        lang = 'zh';
+      } else if (query.includes('en') || query.includes('english')) {
+        lang = 'en';
+      }
+    })();
+  "
+  xmlns:x="http://www.w3.org/1999/xhtml"
+>
 
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- Language Toggle -->
   <div class="absolute top-4 right-6 z-50">
-    <button @click="lang = (lang === 'en') ? 'zh' : 'en'"
-            class="bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-700 transition">
+    <button
+      @click="lang = (lang === 'en') ? 'zh' : 'en'"
+      class="bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-700 transition"
+    >
       <span x-text="lang === 'en' ? '中文' : 'English'"></span>
     </button>
   </div>
@@ -33,14 +52,26 @@
   <!-- Hero Section -->
   <section class="h-screen flex items-center justify-center text-center px-6">
     <div>
-      <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6" x-text="lang === 'en' ? 'We Help You Build Database Kernels' : '我们助您构建数据库内核'"></h1>
-      <p class="text-xl md:text-2xl text-gray-400 mb-8" 
-	   x-text="lang === 'en' 
-		 ? 'bridging academia and real-world industry needs' 
-		 : '填补学术界的先进性和业界需要的完整性之间的差距'">
-      </p>
-      <a href="#services" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition" x-text="lang === 'en' ? 'Services' : '提供的服务'"></a>
-      <a href="#db3" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition" x-text="lang === 'en' ? 'DB3 Kernel' : 'DB3内核'"></a>
+      <h1
+        class="text-5xl md:text-7xl font-bold gradient-text mb-6"
+        x-text="lang === 'en' ? 'We Help You Build Database Kernels' : '我们助您构建数据库内核'"
+      ></h1>
+      <p
+        class="text-xl md:text-2xl text-gray-400 mb-8"
+        x-text="lang === 'en'
+          ? 'bridging academia and real-world industry needs'
+          : '填补学术界的先进性和业界需要的完整性之间的差距'"
+      ></p>
+      <a
+        href='#services'
+        class='bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition'
+        x-text="lang === 'en' ? 'Services' : '提供的服务'"
+      ></a>
+      <a
+        href='#db3'
+        class='bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition'
+        x-text="lang === 'en' ? 'DB3 Kernel' : 'DB3内核'"
+      ></a>
     </div>
   </section>
 
@@ -137,6 +168,5 @@
   <footer class="py-12 text-center text-gray-500 text-sm bg-[#0d0d0d] border-t border-gray-800">
     <span x-text="lang === 'en' ? '© 2025 DB3 Team' : '© 2025 DB3开发团队'"></span>
   </footer>
-
 </body>
 </html>
