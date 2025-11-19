@@ -86,7 +86,7 @@
           <p class="text-gray-400" x-text="lang === 'en' ? 'Research and develop database internals and tools under a clear Statement of Work (SOW) for academic publications, open source, or proprietary goals.' : '在明确的工作说明书（SOW）框架下，无论目的是学术发表，构建开源代码还是私有代码，我们提供围绕数据库内核技术、测评工具的设计、开发与咨询服务。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Genric or Benchmark Performance Improvement' : '用户负载和基准测试性能提升'"></h3>
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Generic or Benchmark Performance Improvement' : '用户负载和基准测试性能提升'"></h3>
           <p class="text-gray-400" x-text="lang === 'en' ? 'Identify bottlenecks in real user workload, or standard benchmarks like TPCC, TPCDS, identify system-wide or component-level optimizations, and participate in improvements.' : '针对数据库的标准测试如TPCC、TPCDS等，我们帮助识别目标系统的性能瓶颈，瞄准优化方向，参与编码和设计，最终实现系统整体或关键组件的性能提升。'"></p>
         </div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow hover:scale-105 transition">
@@ -103,8 +103,8 @@
       <h2 class="text-4xl font-bold mb-4" x-text="lang === 'en' ? 'DB3: A Modern Database Kernel We Built' : 'DB3：我们编写的一个现代化的数据库内核'"></h2>
 	  <div class="w-16 h-1 bg-yellow-400 mx-auto mb-8"></div>
       <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-10" x-text="lang === 'en' 
-        ? 'We write DB3 to prove our capacities: Written in C++20/Rust, DB3 emphasizes robustness, developer-friendliness, high performance and scalability. We use benchmarks to prove its strength.' 
-        : '我们编写了DB3证明我们的能力：DB3用C++20/Rust编写：强调健壮性、构建开发友好、高性能和扩展性。我们用基准测试来证明它的能力。'"></p>
+        ? 'We implemented DB3 to prove our capacities: built with C++20 and Rust, DB3 emphasizes robustness, developer friendliness, high performance and scalability. We use benchmarks to prove its strength.' 
+        : '我们编写了DB3证明我们的能力：DB3用C++20和Rust编写：强调健壮性、构建开发友好、高性能和扩展性。我们用基准测试来证明它的能力。'"></p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
           <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Optimizer: DAG to IRs' : '优化器：DAG -> IRs'"></h3>
@@ -137,14 +137,14 @@
             : '存储引擎实现了全并行的SI维护、GC、日志和恢复。为大内存优化，10核心能够达到1M事务/sec的极限性能。当内存不够时，受限于IO吞吐量，仍然保持优秀性能的平滑过渡。'"></p>
         </div>
 		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
-		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? '3× Simplified Core Code' : '3倍简化的核心代码'"></h3>
+		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? '3× Simplified Core Codebase' : '3倍简化的核心代码'"></h3>
 		  <p class="text-gray-400" x-text="lang === 'en' 
 			? 'Built from the ground up using modern PLs, DB3 is based on years of academic and industrial experience. We adopt high-quality open-source components for non-core modules, and use automatic codeGen to achieve both performance and simplification.' 
 			: '利用现代编程语言，站在多年的学术研究和工业实践的基础上，我们从头构建了DB3数据库内核。特别的，我们在非核心部分使用优质的开源代码，构建自动代码生成框架获得性能和代码简化的双赢。'">
 		  </p>
 		</div>
         <div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Benchmark Proved Performance' : '基准测试证明的性能'"></h3>
+          <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Benchmark Proven Performance' : '基准测试证明的性能'"></h3>
           <p class="text-gray-400" x-html="lang === 'en' 
             ? 'We demonstrate our leading performance using TPC-C, TPC-H, TPC-DS, and streaming benchmarks. See the detailed technical report <a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>here</a>.' 
             : '我们使用TPCC、TPCH、TPCDS和流变体证明我们的领先的性能。详细技术报告看<a href=https://db3kernel.github.io/db3_250131.pdf target=_blank class=text-blue-400 underline>这里</a>'"></p>
@@ -152,7 +152,7 @@
 		<div class="bg-[#1a1a1a] p-6 rounded-2xl hover:scale-105 transition">
 		  <h3 class="text-xl font-semibold mb-3" x-text="lang === 'en' ? 'Who We Are?' : '我们是谁？'"></h3>
 		  <p class="text-gray-400" x-html="lang === 'en' 
-			? 'We are industry veterans in database kernel development. Our team includes PostgreSQL contributors, CockroachDB PMC members, and Linux kernel contributors. Conact <a href=https://www.linkedin.com/in/zhouqingqing/ target=_blank class=text-blue-400 underline>us</a>' 
+			? 'We are industry veterans in database kernel development. Our team includes PostgreSQL contributors, CockroachDB PMC members, and Linux kernel contributors. Contact <a href=https://www.linkedin.com/in/zhouqingqing/ target=_blank class=text-blue-400 underline>us</a>' 
 			: '我们是数据库内核的业界老兵。我们中有PostgreSQL代码贡献者, CockroachDB PMC成员和Linux内核代码贡献者。联系<a href=https://www.linkedin.com/in/zhouqingqing/ target=_blank class=text-blue-400 underline>我们</a>'">
 		  </p>
 		</div>
